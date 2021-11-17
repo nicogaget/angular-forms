@@ -1,0 +1,24 @@
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="inscrire()" class="">
+    <h2>Information:</h2>
+      <label
+      >Nom:
+      <input type="text" formControlName="nom" />
+    </label>
+    <label
+      >Prénom:
+      <input type="text" formControlName="prenom" />
+    </label>
+    <h2>enfants</h2>
+    <ng-container formArrayName="enfants">
+      <div *ngFor="let enfant of enfants.controls; let id = index">
+        coucou{{ id + 1 }}
+        <input type="date" [formControlName]="id" />
+      </div>
+      <button type="button" class="btn btn-info m-5" (click)="ajouterEnfant()">
+        + enfants
+      </button>
+    </ng-container>
+    <button class="primary">Valider</button>
+  </form>
+</div>

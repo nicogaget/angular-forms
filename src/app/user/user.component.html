@@ -1,0 +1,12 @@
+<div class="card m-auto mb-2" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ user.nom }} {{ user.prenom }}</h5>
+    <h6>Les enfants :</h6>
+    <div *ngIf="user.enfants">
+      <ng-container *ngFor="let enfant of user.enfants">
+        <button class="btn btn-info m-1">{{ enfant }}</button>
+      </ng-container>
+      <button class="btn btn-danger">X</button>
+    </div>
+  </div>
+</div>

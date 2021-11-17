@@ -1,0 +1,14 @@
+<p>users works!</p>
+<div class="container d-flex justify-content-around m-auto">
+  <div class="element w-50 border m-2">
+    <app-form-array
+      (userInscriptionEvent)="ajouterUser($event)"
+    ></app-form-array>
+  </div>
+  <div class="element w-50 border m-2">
+    <h2>Liste users :</h2>
+    <ng-container *ngFor="let user of users">
+      <app-user [user]="user"></app-user>
+    </ng-container>
+  </div>
+</div>

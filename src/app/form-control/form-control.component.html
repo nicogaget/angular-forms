@@ -1,0 +1,37 @@
+<h1>Voiture Formulaire</h1>
+<form [formGroup]="voitureForm" (ngSubmit)="envoyerInfos()">
+  <label
+    >Marque:
+    <input type="text" formControlName="marque" />
+  </label>
+  <label
+    >Couleur:
+    <input type="text" formControlName="couleur" />
+  </label>
+  <label
+    >Prix:
+    <input type="number" formControlName="prix" />
+  </label>
+  <button class="btn btn-primary">Ajouter</button>
+</form>
+
+<h1>New Voiture Formulaire</h1>
+<form [formGroup]="newVoitureForm" (ngSubmit)="ajouterVoiture()">
+  <label
+    >Marque:
+    <input type="text" formControlName="marque" />
+  </label>
+  <label
+    >Couleur:
+    <input type="text" formControlName="couleur" />
+  </label>
+  <label
+    >Prix:
+    <input type="number" formControlName="prix" />
+  </label>
+  <label
+    >Kilo:
+    <input type="number" formControlName="kilo" />
+  </label>
+  <button class="btn btn-primary">Ajouter</button>
+</form>

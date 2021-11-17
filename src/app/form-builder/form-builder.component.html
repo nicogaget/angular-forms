@@ -1,0 +1,26 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label
+    >Nom:
+    <input type="text" formControlName="nom" />
+  </label>
+  <label
+    >Prénom:
+    <input type="text" formControlName="prenom" />
+  </label>
+  <label
+    >Age:
+    <input type="number" formControlName="age" />
+  </label>
+  <div formGroupName="chat">
+    <h1>Son chat</h1>
+    <label
+      >Nom:
+      <input type="text" formControlName="nom" />
+    </label>
+    <label
+      >Couleur:
+      <input type="text" formControlName="couleur" />
+    </label>
+  </div>
+  <button class="btn btn-success">Valider</button>
+</form>
